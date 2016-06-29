@@ -10,7 +10,7 @@ title: Barba's blog
 email: mlafroce@gmail.com
 description: A blog with tutorials and stuff I find over the web.
 baseurl: ""
-url: "http://mlafroce.github.io"
+url: "https://mlafroce.github.io"
 #url: http://localhost:4000
 
 # Build settings
