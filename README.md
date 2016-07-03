@@ -1,12 +1,14 @@
 Barba's blog
 ============
 
-TODO
+This is Matías Lafroce's personal blog, *work in progress!*
+
+The blog uses Pahvel Markov's [Clean dark theme](https://github.com/streetturtle/jekyll-clean-dark), what a great guy!
 
 License
 =======
 
-The content of this theme is distributed and licensed under a
+The content of this blog is distributed and licensed under a
 [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/legalcode)
 
     This license lets others distribute, remix, tweak, and build upon your work,
