@@ -2,6 +2,7 @@
 layout: post
 title: Hello jekyll
 description: A guide to install jekyll, create your new site, and host it.
+tags: hello jekyll blog docker
 ---
 
 Hello jekyll

@@ -10,15 +10,32 @@ title: Barba's blog
 email: mlafroce@gmail.com
 description: A blog with tutorials and stuff I find over the web.
 baseurl: ""
-url: "https://mlafroce.github.io"
+url: https://mlafroce.github.io
 #url: http://localhost:4000
-
-# Build settings
-markdown: kramdown
 
 social:
   github: mlafroce
-  stackoverflow: ''
-  linkedin:
-  lastfm: 'matiasz123'
+  linkedin: https://www.linkedin.com/in/matias-lafroce
+  lastfm: matiasz123
   rss: feed.xml
+
+disqus: barbablog
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM # Enable GitHub Flavored Markdown (fenced code blocks)
+  hard_wrap: true
+
+# Default settings
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      layout: "post"
+      disquscomments: false
+      fbcomments: true
+      fblike: true
