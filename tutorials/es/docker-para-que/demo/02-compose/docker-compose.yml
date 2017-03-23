@@ -1,0 +1,16 @@
+version: "2"
+
+services:
+  maria:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: pony
+  wordpress:
+    depends_on:
+      - maria
+    image: wordpress
+    environment:
+      WORDPRESS_DB_HOST: maria:3306
+      WORDPRESS_DB_PASSWORD: pony
+    ports:
+      - "8080:80"

@@ -1,0 +1,9 @@
+{
+  "posts": [
+    { "id": 1, "title": "el otro server", "author": "matías" }
+  ],
+  "comments": [
+    { "id": 1, "body": "otro comentario", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" }
+} 
