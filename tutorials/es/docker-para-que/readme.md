@@ -26,4 +26,4 @@ El tutorial fue redactado para una clase de Taller de programación II, 1er cuat
 
 Para descargar este directorio se debe clonar toda la página, o ejecutar el siguiente comando con *svn*:
 
-svn checkout https://github.com/mlafroce/mlafroce.github.io.git/trunk/tutorials/es/docker
+svn checkout https://github.com/mlafroce/mlafroce.github.io.git/trunk/tutorials/es/docker-para-que
