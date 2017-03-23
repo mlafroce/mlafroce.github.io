@@ -1,6 +1,6 @@
 # DOCKER
 
-![Docker... ¿Para qué?](images-fleco.jpg)
+![Docker... ¿Para qué?](images/fleco.jpg)
 
 ## Acerca de
 
