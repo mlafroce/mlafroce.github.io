@@ -11,15 +11,19 @@ NOTA: En los ejemplos se utilizará el compilador g++, pero las mismas reglas se
 Lo primero que hacemos al empezar a aprender un lenguaje, framework, herramienta, etc nuevo es el clásico *hola mundo*.
 Nuestra primera compilación será entonces del siguiente código:
 
-    #include <iostream>
+~~~ {#hola-mundo .cpp}
+#include <iostream>
 
-    int main (int argc, char** argv) {
-        std::cout << "Hola mundo" << std::endl;
-    }
+int main (int argc, char** argv) {
+    std::cout << "Hola mundo" << std::endl;
+}
+~~~
 
 El código será guardado en un archivo **hello.cpp** lo compilaremos corriendo
 
-    g++ hello.cpp -o hello
+~~~ {.bash}
+g++ hello.cpp -o hello
+~~~
 
 Notar que usamos *g++* debido aque el código compilado es C++, si compilaramos C, el compilador a invocar sería *gcc*.
 Si nuestro compilador está correctamente instalado, se genera un archivo ejecutable *hello*.
@@ -31,18 +35,24 @@ Al invocar gcc/g++, por defecto se ejecutan una serie de pasos para generar un e
 * **Preproceso**: En esta etapa, el *preprocesador* (cuyo nombre es *cpp*, por C PreProcessor) expande las directivas y macros como *include*, *define*, etc.
 Se le puede indicar a gcc detenerse en esta etapa ejecutando
 
-    g++ -E
+~~~ {.bash}
+g++ -E
+~~~
 
 O bien se ejecuta de forma independiente con el comando *cpp archivo.cpp -o archivo.i*.
 
 * **Compilación**: Esta es la etapa de *compilación* propiamente dicha, donde se convierte el código expandido en *código assembly*.
 Se le puede indicar a gcc detenerse en esta etapa ejecutando
 
-    g++ -S
+~~~ {.bash}
+g++ -S
+~~~
 
 * **Assembly**: Esta es la etapa donde el código assembly se transforma en *código objeto*. Este ya es código en lenguaje de máquina, pero con algunas anotaciones y variables parametrizadas para luego ser utilizados en la etapa de *linkeo*. Para detenerse en este paso ejecutar
 
-	g++ -c
+~~~ {.bash}
+g++ -c
+~~~
 
 * **Link**: En esta última etapa, se acomodan los distintos pedacitos de código objeto generados con bibliotecas ya preexistentes en nuestro sistema, se enlaza con las bibliotecas dinámicas (.so en unix, .dll en windows) y se genera un ejecutable.
 
@@ -58,7 +68,9 @@ Una biblioteca estática es básicamente un montón de código objeto que genera
 
 Crear una biblioteca es muy fácil, primero ejecutamos *g++ -c* para crear el código objeto que queremos empaquetar. Para empaquetarlo utilizamos el comando:
 
-	ar -crs <nombre-lib.a> <archivos.o>
+~~~ {.bash}
+ar -crs <nombre-lib.a> <archivos.o>
+~~~
 
 * *-c*: Crea el archivo de salida, o lo actualiza si existe. Si el flag se omite y el archivo no existe, lanza un warning.
 
@@ -68,19 +80,25 @@ Crear una biblioteca es muy fácil, primero ejecutamos *g++ -c* para crear el c�
 
 Para inspeccionar los contenidos de una biblioteca, utilizamos
 
-	ar -t <libfoo.a>
+~~~ {.bash}
+ar -t <libfoo.a>
+~~~
 
 O bien para ver qué símbolos están definidos dentro:
 
-	nm -C <libfoo.a>
+~~~ {.bash}
+nm -C <libfoo.a>
+~~~
 
 ### Compilar contra una biblioteca estática
 
 Compilar contra una biblioteca estática es muy fácil porque es muy similar a tener los archivos de código objeto. Podemos linkearlos como si fueran otro archivo ".o" más, por ejemplo:
 
-	g++ -c class0.cpp class1.cpp ...
-	ar -crs libclasses.a *.o
-	g++ main.cpp libclasses.a
+~~~ {.bash}
+g++ -c class0.cpp class1.cpp ...
+ar -crs libclasses.a *.o
+g++ main.cpp libclasses.a
+~~~
 
 ### Crear una biblioteca dinámica
 
@@ -88,23 +106,31 @@ Crear una biblioteca dinámica es muy similar a compilar una aplicación. La dif
 
 Para esto, recompilamos nuestros archivos fuente pasándole el parámetro *-fPIC*
 
-	g++ -fPIC -c class0.cpp class1.cpp ...
+~~~ {.bash}
+g++ -fPIC -c class0.cpp class1.cpp ...
+~~~
 
 Y luego linkeamos en una biblioteca dinámica:
 
-	g++ -shared -o libclasses.so *.o
+~~~ {.bash}
+g++ -shared -o libclasses.so *.o
+~~~
 
 ### Compilar contra una biblioteca dinámica
 
 Al igual que una biblioteca estática, podemos usarlo como *target* de linkeo
 
-	g++ main.cpp libclasses.a
+~~~ {.bash}
+g++ main.cpp libclasses.a
+~~~
 
 También podemos linkear contra bibliotecas instaladas en el sistema, pasando el flag *-l* seguido del nombre de la biblioteca (sin "lib" ni extensión)
 
 Otro ejemplo:
 	
-	g++ main.cpp -lzip
+~~~ {.bash}
+g++ main.cpp -lzip
+~~~
 
 Este comando intentará encontrar el archivo libzip.so dentro de las bibliotecas del sistema (que son las de la variable *LIBRARY_PATH* que se puede ver al correr g++ en modo verboso)
 
@@ -127,11 +153,13 @@ Para ver qué bibliotecas dinámicas son necesarias para cargar nuestra aplicaci
 Para simplificar la compilación, es muy común utilizar *make* para ejecutar las de compilación.
 Make por defecto busca un archivo conocido como *Makefile*, que posee el siguiente esquema:
 
-	target: dependencias
-		instrucciones
+~~~ {.makefile}
+target: dependencias
+	instrucciones
 
-	otroTarget: otroTargetMas
-		más instrucciones
+otroTarget: otroTargetMas
+	más instrucciones
+~~~
 
 El target por defecto es el primero que no tiene un "." por delante. Por convención el primer target es *all*
 
