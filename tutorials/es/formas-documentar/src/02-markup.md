@@ -7,6 +7,8 @@ El markup es una forma de texto enriquecido basado en marcas para definir la est
 A diferencia del texto plano, el texto estilizado posee marcas para que una aplicación pueda leerlo y mostrarlo (de ahora en adelante *renderizarlo*) con un formato más amigable.
 Por ejemplo, el formato wiki markup, que utilizan los "wikis", posee un formato similar al siguiente
 
+~~~ {.wiki}
+
 = Este es un título =
 == Este es un subtítulo ==
 
@@ -20,6 +22,8 @@ Esta es una lista:
 
 También permite '''Resaltar'''
 
+~~~
+
 Cómo se puede ver, el texto sigue siendo legible al ojo humano, pero tiene algunas notaciones para definir el tipo de contenido.
 Por supuesto existen editores visuales que nos ayudan a escribir sin tener que conocer el lenguaje, pero eso no nos priva de la posibilidad de usar un editor de texto plano.
 
@@ -31,6 +35,8 @@ Es imposible no mencionar al que seguramente es el lenguaje de markup más conoc
 
 HTML es el lenguaje utilizado por los browsers para mostrar páginas web. El formato, en pseudocódigo, es como el siguiente:
 
+~~~ {.html}
+
 <html>
   <cabeza>
     (Datos como el título de la página, estilos, etc)
@@ -41,6 +47,8 @@ HTML es el lenguaje utilizado por los browsers para mostrar páginas web. El for
     <texto>Texto de la página</texto>
   </cuerpo>
 <html>
+
+~~~
 
 HTML además puede ser estilizado fácilmente mediante otro lenguaje de estilos conocido como CSS.
 Una de las ventajas del HTML es que los navegadores modernos permiten renderizaciones muy complejas, pero a la vez, un texto html básico se adapta muy rápido a la pantalla, ya sea de una pc, tablet, celular, reader, etc.

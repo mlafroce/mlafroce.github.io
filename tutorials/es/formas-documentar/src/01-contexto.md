@@ -36,4 +36,3 @@ Algunas limitaciones al trabajar con un procesador de texto son:
 * **Los procesadores de texto son más pesados que un editor de texto**: Los procesadores de texto tienen muchas funciones que muchas veces no usamos, a veces simplemente queremos concentrarnos en el texto y no en las 20 mil formas de formatearlo que tenemos.
 
 * **La salida puede variar según el S.O. o según el uso de plugins**: No todos los sistemas operativos tienen las mismas fuentes, por lo que la salida puede variar entre sistema y sistema.
-

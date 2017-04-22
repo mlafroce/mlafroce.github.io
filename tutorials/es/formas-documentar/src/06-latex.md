@@ -14,6 +14,8 @@ El siguiente código se utiliza para
 ~~~ {.latex}
 
 \documentclass{article}
+\usepackage[utf8]{inputenc} % Especifica la codificación de caracteres de los documentos.
+\usepackage[spanish]{babel} % Indica que el documento se escribirá en español.
 \title{FLISoL Berazategui 2017}
 \author{Matías Lafroce}
 \date{22 de abril del 2017}
@@ -36,3 +38,44 @@ El formato se puede ver que es muy verboso, y a grosso modo indica lo siguiente:
 
 * *maketitle*: pega el título
 
+Latex está armado con la filosofía **WYCIWYG** que en humano es *Lo que compilás es lo que obtenés*. El código de hola mundo se verá igual sea cual sea la máquina, el sistema operativo, entorno, etc sobre el que está corriendo el compilador.
+
+### Paquete matemático
+
+Una de las características más llamativas de Latex son los paquetes de extensiones. Y una de sus extensiones más importantes es la de símbolos matemáticos, *amsmath*.
+
+Amsmath tiene todo lo que el matemático (o el que sufre la matemática) puede necesitar, símbolos griegos, tipografías, operadores, alineación de ecuaciones, etc.
+
+Ejemplo
+
+f(x,\lambda) = \lambda e^{- \lambda x}
+
+~~~ {.latex}
+
+\documentclass{article}
+
+\usepackage[utf8]{inputenc} % Especifica la codificación de caracteres de los documentos.
+\usepackage[spanish]{babel} % Indica que el documento se escribirá en español.
+\usepackage{amssymb, amsmath} % Paquete matemático
+
+\title{FLISoL Berazategui 2017}
+
+\author{Matías Lafroce}
+
+\date{22 de abril del 2017}
+
+\begin{document}
+
+   \maketitle
+
+   \newpage
+
+   \tableofcontents
+
+   \newpage
+   
+   \section{Ecuaciones}
+   \(f(x,\lambda) = \lambda e^{- \lambda x}\)
+\end{document}
+
+~~~

@@ -15,8 +15,6 @@ Algunos sitios que utilizan markdown para que los usuarios escriban contenido so
 
 * Familia de páginas stackexchange
 
-........ rellenar
-
 ## Editores que lo usan
 
 Hay varios editores offline y online que permiten renderizar texto en formato markdown mientras se escribe, algunos ejemplos son
