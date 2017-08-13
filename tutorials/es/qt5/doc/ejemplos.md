@@ -313,6 +313,7 @@ qt5_wrap_ui(UIS_HEADERS
         ui/Greeter.ui
 )
 }
+~~~
 
 Esta macro toma los archivos *.ui* pasados como parámetro, ejecuta *uic* sobre ellos, y almacena los nombres de los headers generados en la variable puesta como primer parámetro. Los headers generados tendrán nombres con formato ui_{filename sin .ui}.h
 
