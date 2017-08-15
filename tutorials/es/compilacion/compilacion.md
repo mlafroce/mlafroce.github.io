@@ -11,7 +11,7 @@ NOTA: En los ejemplos se utilizará el compilador g++, pero las mismas reglas se
 Lo primero que hacemos al empezar a aprender un lenguaje, framework, herramienta, etc nuevo es el clásico *hola mundo*.
 Nuestra primera compilación será entonces del siguiente código:
 
-~~~ {#hola-mundo .cpp}
+~~~ {.cpp #hola-mundo}
 #include <iostream>
 
 int main (int argc, char** argv) {
@@ -25,7 +25,7 @@ El código será guardado en un archivo **hello.cpp** lo compilaremos corriendo
 g++ hello.cpp -o hello
 ~~~
 
-Notar que usamos *g++* debido aque el código compilado es C++, si compilaramos C, el compilador a invocar sería *gcc*.
+Notar que usamos *g++* debido a que el código compilado es C++, si compilaramos C, el compilador a invocar sería *gcc*.
 Si nuestro compilador está correctamente instalado, se genera un archivo ejecutable *hello*.
 
 ### Paso a paso
@@ -33,7 +33,7 @@ Si nuestro compilador está correctamente instalado, se genera un archivo ejecut
 Al invocar gcc/g++, por defecto se ejecutan una serie de pasos para generar un ejecutable:
 
 * **Preproceso**: En esta etapa, el *preprocesador* (cuyo nombre es *cpp*, por C PreProcessor) expande las directivas y macros como *include*, *define*, etc.
-Se le puede indicar a gcc detenerse en esta etapa ejecutando
+Se le puede indicar a gcc detenerse en esta etapa ejecutando.
 
 ~~~ {.bash}
 g++ -E
@@ -78,7 +78,7 @@ ar -crs <nombre-lib.a> <archivos.o>
 
 * *-s*: Indexa el archivo.
 
-Para inspeccionar los contenidos de una biblioteca, utilizamos
+Para inspeccionar los contenidos de una biblioteca, utilizamos:
 
 ~~~ {.bash}
 ar -t <libfoo.a>
@@ -153,7 +153,7 @@ Para ver qué bibliotecas dinámicas son necesarias para cargar nuestra aplicaci
 Para simplificar la compilación, es muy común utilizar *make* para ejecutar las de compilación.
 Make por defecto busca un archivo conocido como *Makefile*, que posee el siguiente esquema:
 
-~~~ {.makefile}
+~~~ {.make}
 target: dependencias
 	instrucciones
 
