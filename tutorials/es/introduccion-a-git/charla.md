@@ -98,7 +98,7 @@ También, si eliminamos el archivo por fuera de git, y queremos notificar esta a
 
 #### Recuperar un archivo eliminado
 
-Para recuperar un archivo, ejecutar `git checkout <nombre-archivo>
+Para recuperar un archivo, ejecutar `git checkout <nombre-archivo>`
 
 #### Agregar TODOS los cambios al repo
 
