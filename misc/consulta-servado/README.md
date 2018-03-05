@@ -1,5 +1,8 @@
 # Consulta de SERVADDO
 
+Script de *python* para realizar búsquedas en el listado oficial, especialmente útil cuando el portal web del ABC está caido o no responde.
+Mediante este *script* puede realizar búsquedas y descargar el resultado en formato *CSV*, para luego abrirlo con alguna aplicación de hojas de cálculo (como el *libre office calc* o *excel*)
+
 ## Requerimientos
 
 Requiere python3, que puede ser descargado de [acá](https://www.python.org/download/releases/3.0/)
