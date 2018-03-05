@@ -2,7 +2,7 @@
 
 ## Requerimientos
 
-Requiere python3, que puede ser descargado de [acá](https://www.python.org/download/releases/3.0/)
+Requiere python3. La versión 3.6 puede ser descargado de [acá](https://www.python.org/downloads/)
 
 ## Instrucciones
 
@@ -19,7 +19,7 @@ Una vez ingresado el/los criterios de búsqueda, presione enter para iniciar la 
 
 Finalmente ingrese un nombre para el archivo de salida, que será guardado en formato **csv**
 
-## NOTAS
+## IMPORTANTE
 
 Para no saturar el servidor, se ha limitado la búsqueda a 2000 registros, de ser necesario, modifique el script en la linea marcada para este fin.
 
