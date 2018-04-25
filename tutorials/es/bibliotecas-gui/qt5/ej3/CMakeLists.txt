@@ -26,7 +26,8 @@ message("Headers generados: ${UIS_HEADERS}")
 
 add_executable(step-3
   src/Greeter.cpp
-  src/main.cpp)
+  src/main.cpp
+  ${UIS_HEADERS})
 
 # Use the Widgets module from Qt 5.
 target_link_libraries(step-3 Qt5::Widgets)

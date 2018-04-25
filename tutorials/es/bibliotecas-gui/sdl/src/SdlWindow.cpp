@@ -27,7 +27,7 @@ SdlWindow::SdlWindow(int width, int height) :
         width(width), height(height) {
     SDL_CreateWindowAndRenderer(width,
                                 height,
-                                SDL_RENDERER_ACCELERATED,
+                                SDL_RENDERER_SOFTWARE,
                                 &this->window,
                                 &this->renderer);
 }
