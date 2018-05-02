@@ -1,10 +1,13 @@
+cmake_minimum_required(VERSION 2.8)
+
 project(qt-sdl)
 
 set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-add_library(sdlqtexample
+add_library(sdldemo
   src/Area.cpp
-  src/SdlImage.cpp
+  src/SdlTexture.cpp
+  src/SdlException.cpp
   src/SdlWindow.cpp
 )
 
@@ -18,6 +21,6 @@ add_executable (sdl-demo
 )
 
 
-target_link_libraries(sdl-demo sdlqtexample SDL2 SDL2_image)
+target_link_libraries(sdl-demo sdldemo SDL2 SDL2_image)
 
 install(FILES assets/cat.gif DESTINATION ${CMAKE_BINARY_DIR})
