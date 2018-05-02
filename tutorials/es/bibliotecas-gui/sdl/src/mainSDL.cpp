@@ -3,7 +3,7 @@
 #include "SdlImage.h"
 
 int main(int argc, char** argv){
-	SdlWindow window(400,400);
+	SdlWindow window(1024, 600);
 	window.fill();
 	SDL_Renderer* renderer = window.getRenderer();
 	SdlImage im("cat.gif", renderer);
