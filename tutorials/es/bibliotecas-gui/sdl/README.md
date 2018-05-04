@@ -15,6 +15,14 @@ make && make install
 
 ## Ejecución
 
-Ejecutar escribiendo `./sdl-demo`
+### Hello SDL
 
+Carga una imagen y la muestra en pantalla durante 3 segundos
 
+Ejecutar escribiendo `./sdl-hello`
+
+### Eventos básicos
+
+Carga una imagen y la muestra en pantalla. Desplaza la imagen por el canvas al presionar las teclas direccionales
+
+Ejecutar escribiendo `./sdl-events`
