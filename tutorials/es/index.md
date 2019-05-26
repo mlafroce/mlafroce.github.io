@@ -7,6 +7,13 @@ layout: page
 En esta sección se agregan todos los tutoriales disponibles
 
 
+## Introducción a la programación
+
+Una charla con un pantallazo acerca de lo que es el mundo de la programación. Esta charla es dada en conjunto con [Javier Gutierrez](https://www.instagram.com/jace.si)
+
+[Link al repositorio](https://github.com/mlafroce/mlafroce.github.io/tree/master/tutorials/es/introduccion-programacion)
+
+
 ## Formas de documentar
 
 Introducción a varias formas de documentar basadas en texto plano
